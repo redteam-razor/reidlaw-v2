@@ -4,163 +4,263 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reid Realty - Professional Property Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         .realty-hero {
-            height: 500px;
-            background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
-            background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&h=900&fit=crop');
-            background-size: cover;
-            background-position: center;
+            height: 80vh;
+            background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=2000&h=1200&fit=crop&q=90') center/cover;
         }
         
-        .realty-services {
-            padding: 5rem 0;
+        .realty-services-section {
+            padding: 8rem 0;
             background: var(--white);
         }
         
-        .realty-grid {
+        .realty-service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
         }
         
-        .realty-service {
+        .realty-service-card {
             background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--secondary-color);
-        }
-        
-        .realty-service h3 {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .realty-service ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .realty-service ul li {
-            padding: 0.5rem 0;
-            color: var(--text-light);
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .realty-service ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-            font-weight: bold;
-        }
-        
-        .property24-cta {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
-            padding: 4rem 0;
-            text-align: center;
-            color: var(--white);
-        }
-        
-        .property24-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .property24-cta p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .property24-btn {
-            display: inline-block;
-            padding: 1.2rem 3rem;
-            background: var(--white);
-            color: var(--primary-color);
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 1.2rem;
+            padding: 3rem;
+            border-radius: 2px;
+            border-left: 4px solid var(--gold);
             transition: all 0.3s;
         }
         
-        .property24-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+        .realty-service-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-left-color: var(--accent);
         }
         
-        .why-choose {
-            padding: 5rem 0;
+        .realty-service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .realty-service-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .realty-service-card li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .realty-service-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        .property24-section {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #2a2a4e 100%);
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .property24-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=2000&h=1000&fit=crop&q=80') center/cover;
+            opacity: 0.1;
+        }
+        
+        .property24-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .property24-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .property24-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+        
+        .property24-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 1.5rem 4rem;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            border-radius: 2px;
+            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        .property24-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(255,255,255,0.2);
+        }
+        
+        .why-section {
+            padding: 8rem 0;
             background: var(--bg-light);
         }
         
         .why-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
         }
         
         .why-card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
+            padding: 3rem;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 2px;
+            transition: all 0.4s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
         }
         
         .why-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
         }
         
         .why-card h4 {
-            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .why-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .featured-properties {
+            padding: 8rem 0;
+            background: var(--white);
+        }
+        
+        .property-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .property-card {
+            position: relative;
+            height: 400px;
+            border-radius: 2px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .property-card-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.6s;
+        }
+        
+        .property-card:hover .property-card-image {
+            transform: scale(1.1);
+        }
+        
+        .property-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+            color: var(--white);
+        }
+        
+        .property-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
             <div class="nav-brand">
-                <h2>Reid Realty</h2>
+                <div class="logo">
+                    <span class="logo-r">R</span>
+                    <div class="logo-text">
+                        <span class="logo-name">Reid Realty</span>
+                        <span class="logo-sub">Professional Property Services</span>
+                    </div>
+                </div>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html">Reid Attorneys</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#property24">View Properties</a></li>
+                <li><a href="#property24">Properties</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero realty-hero">
+    <!-- Hero -->
+    <section class="hero-section realty-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Reid Realty</h1>
-            <p class="hero-subtitle">Professional Property Services Backed by Legal Expertise</p>
-            <div class="hero-buttons">
-                <a href="#property24" class="btn btn-primary">View Our Properties</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
-            </div>
+            <h1 class="hero-title">Reid Realty</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-subtitle">Professional Property Services<br>Backed by Legal Expertise</p>
         </div>
+        <div class="scroll-indicator"><span></span></div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="realty-services">
+    <!-- Services -->
+    <section id="services" class="realty-services-section">
         <div class="container">
-            <h2 class="section-title">Our Property Services</h2>
-            <p class="section-subtitle">Comprehensive real estate solutions with the backing of experienced legal professionals</p>
+            <h2 class="section-title-center">Our Property Services</h2>
+            <div class="services-divider-center"></div>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-light); max-width: 800px; margin: 0 auto 4rem;">
+                Comprehensive real estate solutions with the backing of experienced legal professionals
+            </p>
             
-            <div class="realty-grid">
-                <div class="realty-service">
+            <div class="realty-service-grid">
+                <div class="realty-service-card">
                     <h3>🏘️ Residential Sales & Purchases</h3>
                     <ul>
                         <li>Houses, apartments, and townhouses</li>
@@ -171,7 +271,7 @@
                     </ul>
                 </div>
                 
-                <div class="realty-service">
+                <div class="realty-service-card">
                     <h3>🏢 Commercial Property</h3>
                     <ul>
                         <li>Office space and retail properties</li>
@@ -182,7 +282,7 @@
                     </ul>
                 </div>
                 
-                <div class="realty-service">
+                <div class="realty-service-card">
                     <h3>🏡 Property Management</h3>
                     <ul>
                         <li>Tenant screening and placement</li>
@@ -193,7 +293,7 @@
                     </ul>
                 </div>
                 
-                <div class="realty-service">
+                <div class="realty-service-card">
                     <h3>📋 Conveyancing Services</h3>
                     <ul>
                         <li>Transfer of ownership</li>
@@ -204,7 +304,7 @@
                     </ul>
                 </div>
                 
-                <div class="realty-service">
+                <div class="realty-service-card">
                     <h3>💼 Property Investment Consulting</h3>
                     <ul>
                         <li>Market research and analysis</li>
@@ -215,7 +315,7 @@
                     </ul>
                 </div>
                 
-                <div class="realty-service">
+                <div class="realty-service-card">
                     <h3>🔍 Property Valuations</h3>
                     <ul>
                         <li>Market valuations</li>
@@ -229,46 +329,81 @@
         </div>
     </section>
 
-    <!-- Property24 CTA -->
-    <section id="property24" class="property24-cta">
+    <!-- Featured Properties Preview -->
+    <section class="featured-properties">
         <div class="container">
-            <h2>Browse Our Property Listings</h2>
-            <p>View our complete portfolio of available properties on Property24</p>
-            <a href="https://www.property24.co.za/" target="_blank" class="property24-btn">
-                View Properties on Property24 →
+            <h2 class="section-title-center">Featured Properties</h2>
+            <div class="services-divider-center"></div>
+            
+            <div class="property-showcase">
+                <div class="property-card">
+                    <div class="property-card-image" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="property-card-overlay">
+                        <h4>Luxury Family Home</h4>
+                        <p>Constantia, Cape Town</p>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-card-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="property-card-overlay">
+                        <h4>Modern Villa</h4>
+                        <p>Camps Bay, Cape Town</p>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-card-image" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="property-card-overlay">
+                        <h4>Penthouse Suite</h4>
+                        <p>Waterfront, Cape Town</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property24 CTA -->
+    <section id="property24" class="property24-section">
+        <div class="property24-content">
+            <h2>Browse Our Complete Portfolio</h2>
+            <p>View our full selection of properties on Property24</p>
+            <a href="https://www.property24.co.za/" target="_blank" class="property24-button">
+                VIEW PROPERTIES ON PROPERTY24 →
             </a>
-            <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
-                Find your perfect home or investment property from our curated selection
+            <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.85;">
+                Discover your perfect home or investment property
             </p>
         </div>
     </section>
 
     <!-- Why Choose Us -->
-    <section class="why-choose">
+    <section class="why-section">
         <div class="container">
-            <h2 class="section-title">Why Choose Reid Realty?</h2>
+            <h2 class="section-title-center">Why Choose Reid Realty?</h2>
+            <div class="services-divider-center"></div>
             
             <div class="why-grid">
                 <div class="why-card">
-                    <div class="why-icon">⚖️</div>
+                    <span class="why-icon">⚖️</span>
                     <h4>Legal Expertise</h4>
-                    <p>Backed by Reid Attorneys' extensive legal experience for seamless transactions</p>
+                    <p>Backed by Reid Attorneys' extensive legal experience for seamless, secure transactions</p>
                 </div>
                 
                 <div class="why-card">
-                    <div class="why-icon">🎯</div>
+                    <span class="why-icon">🎯</span>
                     <h4>Local Knowledge</h4>
-                    <p>Deep understanding of the Cape Town property market and regulations</p>
+                    <p>Deep understanding of the Cape Town property market and regulatory landscape</p>
                 </div>
                 
                 <div class="why-card">
-                    <div class="why-icon">💎</div>
+                    <span class="why-icon">💎</span>
                     <h4>End-to-End Service</h4>
-                    <p>From property search to final registration, we handle everything</p>
+                    <p>From property search to final registration, we handle everything professionally</p>
                 </div>
                 
                 <div class="why-card">
-                    <div class="why-icon">🤝</div>
+                    <span class="why-icon">🤝</span>
                     <h4>Trusted Relationships</h4>
                     <p>Building long-term partnerships with clients for over a decade</p>
                 </div>
@@ -276,28 +411,29 @@
         </div>
     </section>
 
-    <!-- Back to Attorneys CTA -->
-    <section class="realty-cta">
-        <div class="container">
+    <!-- Attorneys CTA -->
+    <section class="realty-cta-section">
+        <div class="realty-cta-image" style="background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=2000&h=1000&fit=crop&q=90')"></div>
+        <div class="realty-cta-overlay"></div>
+        <div class="realty-cta-content">
             <h2>Need Legal Services?</h2>
             <p>Visit Reid Attorneys for comprehensive legal support</p>
-            <a href="index.html" class="btn btn-light">Visit Reid Attorneys →</a>
+            <a href="index.html" class="cta-button">VISIT REID ATTORNEYS</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Reid Realty</h3>
-                    <p>Professional property services backed by legal expertise</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-r">R</span>
+                        <span class="footer-name">Reid Realty</span>
+                    </div>
+                    <p>Professional property services<br>backed by legal expertise</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Upper Wynberg, Cape Town<br>South Africa</p>
-                </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
                         <li>Residential Sales</li>
@@ -306,6 +442,11 @@
                         <li>Conveyancing</li>
                         <li>Investment Consulting</li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>21 Constantia Main Road<br>Upper Wynberg, Cape Town<br>South Africa</p>
+                    <p style="margin-top: 1rem;">021 683 0912<br>info@reidlaw.co.za</p>
                 </div>
             </div>
             <div class="footer-bottom">

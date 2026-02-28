@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reid Attorneys - Ethical, Professional & Reliable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
             <div class="nav-brand">
-                <h2>Reid Attorneys</h2>
+                <div class="logo">
+                    <span class="logo-r">R</span>
+                    <div class="logo-text">
+                        <span class="logo-name">Reid Inc.</span>
+                        <span class="logo-sub">Estate Attorneys Incorporated</span>
+                    </div>
+                </div>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
@@ -24,14 +33,52 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero-section">
+        <div class="hero-image"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Ethical, Professional & Reliable</h1>
-            <p class="hero-subtitle">Leading boutique law firm in Cape Town providing specialist legal services since 2010</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Request Consultation</a>
-                <a href="#services" class="btn btn-secondary">Our Services</a>
+            <h1 class="hero-title">Ethical, Professional & Reliable</h1>
+            <div class="hero-divider"></div>
+            <p class="hero-subtitle">Leading boutique law firm in Cape Town<br>Specialist legal services since 2010</p>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="services-image-section">
+            <div class="services-image"></div>
+            <div class="services-overlay"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-divider"></div>
+            <div class="services-list">
+                <div class="service-item" data-service="dispute">
+                    <span class="service-icon">⚖</span>
+                    <h3>DISPUTE RESOLUTION</h3>
+                </div>
+                <div class="service-item" data-service="corporate">
+                    <span class="service-icon">🏢</span>
+                    <h3>CORPORATE AND COMMERCIAL LAW</h3>
+                </div>
+                <div class="service-item" data-service="criminal">
+                    <span class="service-icon">🛡</span>
+                    <h3>CRIMINAL LAW</h3>
+                </div>
+                <div class="service-item" data-service="estate">
+                    <span class="service-icon">📋</span>
+                    <h3>ESTATE ADMINISTRATION AND PLANNING</h3>
+                </div>
+                <div class="service-item" data-service="property">
+                    <span class="service-icon">🏠</span>
+                    <h3>PROPERTY LAW</h3>
+                </div>
+            </div>
+            <div class="learn-more-btn-container">
+                <a href="#services" class="learn-more-btn">LEARN MORE</a>
             </div>
         </div>
     </section>
@@ -39,148 +86,194 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">About Reid Attorneys</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Founded by <strong>Rustum Keith Reid</strong> in 2010, Reid Inc is a leading boutique law firm, 
-                        based in Upper Wynberg, Cape Town providing specialist conveyancing, litigation and advisory legal services.
-                    </p>
-                    <p>
-                        The practice offers experienced and skilled attention to all its clients and is now established as 
-                        a full complement law firm able to advise and litigate on a wide spectrum of matters. Our experience 
-                        spans the fields of civil, criminal, commercial and immigration law in all forums including the 
-                        Magistrate Court, High Court, Labour Court and Supreme Court.
-                    </p>
-                    <p>
-                        Our approach is based on the understanding that in the current dynamic environment, we must put the 
-                        needs of our clients first and find ways to best service their particular needs in the most professional 
-                        and cost-effective manner.
-                    </p>
-                    <p class="highlight">
-                        Most of our clients have been with us for over a decade because we believe that positive relationships 
-                        are the foundation of our business. In these uncertain times we offer our clients reliability, 
-                        excellence and affordability.
-                    </p>
-                    <blockquote class="quote">
-                        "Discourage litigation. Persuade your neighbor to compromise whenever you can. As a peacemaker 
-                        the lawyer has a superior opportunity of being a good man. There will still be business enough."
-                        <footer>— Abraham Lincoln</footer>
+            <div class="about-grid">
+                <div class="about-image-col">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=1000&fit=crop&q=90" alt="Legal office">
+                    </div>
+                </div>
+                <div class="about-content-col">
+                    <h2 class="about-title">REID ATTORNEYS INCORPORATED</h2>
+                    <div class="title-divider"></div>
+                    
+                    <div class="about-text">
+                        <p>Founded by <strong>Rustum Keith Reid</strong> in 2010, Reid Inc is a leading boutique law firm, based in Upper Wynberg, Cape Town providing specialist conveyancing, litigation and advisory legal services.</p>
+                        
+                        <p>The practice offers experienced and skilled attention to all its clients and is now established as a full complement law firm able to advise and litigate on a wide spectrum of matters. Our experience spans the fields of civil, criminal, commercial and immigration law in all forums including the Magistrate Court, High Court, Labour Court and Supreme Court.</p>
+                        
+                        <p>Our approach is based on the understanding that in the current dynamic environment, we must put the needs of our clients first and find ways to best service their particular needs in the most professional and cost-effective manner.</p>
+                        
+                        <p class="highlight-text">Most of our Clients have been with us for over a decade because we believe that positive relationships are the foundation of our business. In these uncertain times we offer our clients reliability, excellence and affordability.</p>
+                    </div>
+                    
+                    <blockquote class="lincoln-quote">
+                        <p>"Discourage litigation. Persuade your neighbor to compromise whenever you can. As a peacemaker the lawyer has a superior opportunity of being a good man. There will still be business enough."</p>
+                        <div class="quote-author">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/220px-Abraham_Lincoln_O-77_matte_collodion_print.jpg" alt="Abraham Lincoln">
+                            <span>Abraham Lincoln</span>
+                        </div>
                     </blockquote>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=800&fit=crop" alt="Law office">
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
+    <!-- Detailed Services -->
+    <section id="services" class="services-detailed">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">⚖️</div>
-                    <h3>Dispute Resolution</h3>
-                    <p>Expert representation in civil litigation across all courts</p>
+            <h2 class="section-title-center">Comprehensive Legal Services</h2>
+            <div class="services-divider-center"></div>
+            
+            <div class="service-detail-grid">
+                <div class="service-detail-card">
+                    <div class="service-detail-image" style="background-image: url('https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="service-detail-content">
+                        <h3>⚖ Dispute Resolution</h3>
+                        <p>Expert representation in civil litigation across all courts. We provide skilled advocacy and strategic counsel in complex disputes, from initial consultation through to final judgment.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Corporate & Commercial Law</h3>
-                    <p>Comprehensive business legal advisory and transaction support</p>
+                
+                <div class="service-detail-card">
+                    <div class="service-detail-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="service-detail-content">
+                        <h3>🏢 Corporate & Commercial Law</h3>
+                        <p>Comprehensive business legal advisory and transaction support. From company formation to mergers and acquisitions, we guide businesses through complex commercial landscapes.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🛡️</div>
-                    <h3>Criminal Law</h3>
-                    <p>Professional defense representation in criminal matters</p>
+                
+                <div class="service-detail-card">
+                    <div class="service-detail-image" style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="service-detail-content">
+                        <h3>🛡 Criminal Law</h3>
+                        <p>Professional defense representation in criminal matters. We protect your rights and provide vigorous defense across all criminal proceedings, from bail applications to trial advocacy.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h3>Estate Administration & Planning</h3>
-                    <p>Wills, trusts, and estate management services</p>
+                
+                <div class="service-detail-card">
+                    <div class="service-detail-image" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="service-detail-content">
+                        <h3>📋 Estate Administration & Planning</h3>
+                        <p>Wills, trusts, and comprehensive estate management services. We ensure your legacy is protected and your wishes are executed with precision and care.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Property Law</h3>
-                    <p>Conveyancing, property transactions, and real estate law</p>
+                
+                <div class="service-detail-card">
+                    <div class="service-detail-image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80')"></div>
+                    <div class="service-detail-content">
+                        <h3>🏠 Property Law</h3>
+                        <p>Specialist conveyancing, property transactions, and real estate law. From residential transfers to commercial property portfolios, we deliver seamless property legal services.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact/Query Form Section -->
+    <!-- Contact Form -->
     <section id="contact" class="contact-section">
+        <div class="contact-background"></div>
         <div class="container">
-            <h2 class="section-title">Get Legal Assistance</h2>
-            <p class="section-subtitle">Submit your legal query and we'll get back to you promptly</p>
-            
-            <form class="query-form" id="queryForm">
-                <div class="form-group">
-                    <label for="fullName">Full Name *</label>
-                    <input type="text" id="fullName" name="fullName" required>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get Legal Assistance</h2>
+                    <p>Submit your legal query and we'll respond promptly with expert guidance.</p>
+                    <div class="contact-details">
+                        <div class="contact-detail-item">
+                            <span class="detail-icon">📍</span>
+                            <div>
+                                <strong>Location</strong>
+                                <p>21 Constantia Main Road<br>Upper Wynberg, Cape Town<br>South Africa</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="detail-icon">📞</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>021 683 0912</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail-item">
+                            <span class="detail-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>info@reidlaw.co.za</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                <form class="query-form" id="queryForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="fullName" name="fullName" placeholder="Full Name *" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email Address *" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number *" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="queryType" name="queryType" required>
+                                <option value="">Select Service Type *</option>
+                                <option value="dispute">Dispute Resolution</option>
+                                <option value="corporate">Corporate & Commercial Law</option>
+                                <option value="criminal">Criminal Law</option>
+                                <option value="estate">Estate Administration & Planning</option>
+                                <option value="property">Property Law</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Please describe your legal query..." required></textarea>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">SUBMIT QUERY</button>
+                </form>
                 
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required>
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Query Submitted Successfully!</h3>
+                    <p>Thank you for contacting Reid Attorneys. We'll review your query and respond shortly.</p>
                 </div>
-                
-                <div class="form-group">
-                    <label for="queryType">Query Type *</label>
-                    <select id="queryType" name="queryType" required>
-                        <option value="">Select a service...</option>
-                        <option value="dispute">Dispute Resolution</option>
-                        <option value="corporate">Corporate & Commercial Law</option>
-                        <option value="criminal">Criminal Law</option>
-                        <option value="estate">Estate Administration & Planning</option>
-                        <option value="property">Property Law</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Your Message *</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="Please describe your legal query in detail..."></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary btn-full">Submit Query</button>
-                <p class="form-note">* All fields are required. Your information will be kept confidential.</p>
-            </form>
-            
-            <div id="successMessage" class="success-message" style="display: none;">
-                <h3>✓ Query Submitted Successfully!</h3>
-                <p>Thank you for contacting Reid Attorneys. We'll review your query and get back to you shortly.</p>
             </div>
         </div>
     </section>
 
-    <!-- Reid Realty CTA -->
-    <section class="realty-cta">
-        <div class="container">
+    <!-- Realty CTA -->
+    <section class="realty-cta-section">
+        <div class="realty-cta-image"></div>
+        <div class="realty-cta-overlay"></div>
+        <div class="realty-cta-content">
             <h2>Looking for Property Services?</h2>
-            <p>Visit Reid Realty for all your real estate needs</p>
-            <a href="reid-realty.html" class="btn btn-light">Visit Reid Realty →</a>
+            <p>Discover Reid Realty - Professional property services backed by legal expertise</p>
+            <a href="reid-realty.html" class="cta-button">VISIT REID REALTY</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Reid Attorneys</h3>
-                    <p>Ethical, Professional & Reliable legal services since 2010</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-r">R</span>
+                        <span class="footer-name">Reid Attorneys</span>
+                    </div>
+                    <p>Ethical, Professional & Reliable<br>Legal services since 2010</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Upper Wynberg, Cape Town<br>South Africa</p>
-                </div>
-                <div class="footer-section">
+                <div class="footer-col">
                     <h4>Services</h4>
                     <ul>
                         <li>Dispute Resolution</li>
@@ -189,6 +282,11 @@
                         <li>Estate Administration</li>
                         <li>Property Law</li>
                     </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>21 Constantia Main Road<br>Upper Wynberg, Cape Town<br>South Africa</p>
+                    <p style="margin-top: 1rem;">021 683 0912<br>info@reidlaw.co.za</p>
                 </div>
             </div>
             <div class="footer-bottom">
