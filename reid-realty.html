@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reid Realty - Professional Property Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .realty-hero {
+            height: 500px;
+            background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+            background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&h=900&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .realty-services {
+            padding: 5rem 0;
+            background: var(--white);
+        }
+        
+        .realty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .realty-service {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .realty-service h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .realty-service ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .realty-service ul li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .realty-service ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .property24-cta {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #3b82f6 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .property24-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .property24-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .property24-btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--white);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .property24-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+        }
+        
+        .why-choose {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .why-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .why-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .why-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>Reid Realty</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Reid Attorneys</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#property24">View Properties</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero realty-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Reid Realty</h1>
+            <p class="hero-subtitle">Professional Property Services Backed by Legal Expertise</p>
+            <div class="hero-buttons">
+                <a href="#property24" class="btn btn-primary">View Our Properties</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="realty-services">
+        <div class="container">
+            <h2 class="section-title">Our Property Services</h2>
+            <p class="section-subtitle">Comprehensive real estate solutions with the backing of experienced legal professionals</p>
+            
+            <div class="realty-grid">
+                <div class="realty-service">
+                    <h3>🏘️ Residential Sales & Purchases</h3>
+                    <ul>
+                        <li>Houses, apartments, and townhouses</li>
+                        <li>First-time buyer assistance</li>
+                        <li>Investment property guidance</li>
+                        <li>Market analysis and valuation</li>
+                        <li>Full conveyancing support</li>
+                    </ul>
+                </div>
+                
+                <div class="realty-service">
+                    <h3>🏢 Commercial Property</h3>
+                    <ul>
+                        <li>Office space and retail properties</li>
+                        <li>Industrial and warehouse facilities</li>
+                        <li>Commercial lease agreements</li>
+                        <li>Investment property portfolios</li>
+                        <li>Due diligence and compliance</li>
+                    </ul>
+                </div>
+                
+                <div class="realty-service">
+                    <h3>🏡 Property Management</h3>
+                    <ul>
+                        <li>Tenant screening and placement</li>
+                        <li>Rent collection and accounting</li>
+                        <li>Property maintenance coordination</li>
+                        <li>Lease administration</li>
+                        <li>Regulatory compliance</li>
+                    </ul>
+                </div>
+                
+                <div class="realty-service">
+                    <h3>📋 Conveyancing Services</h3>
+                    <ul>
+                        <li>Transfer of ownership</li>
+                        <li>Bond registration</li>
+                        <li>Sectional title transfers</li>
+                        <li>Contract review and negotiation</li>
+                        <li>Legal clearance certificates</li>
+                    </ul>
+                </div>
+                
+                <div class="realty-service">
+                    <h3>💼 Property Investment Consulting</h3>
+                    <ul>
+                        <li>Market research and analysis</li>
+                        <li>Investment strategy development</li>
+                        <li>Portfolio optimization</li>
+                        <li>Risk assessment</li>
+                        <li>Tax-efficient structuring</li>
+                    </ul>
+                </div>
+                
+                <div class="realty-service">
+                    <h3>🔍 Property Valuations</h3>
+                    <ul>
+                        <li>Market valuations</li>
+                        <li>Rental assessments</li>
+                        <li>Pre-purchase evaluations</li>
+                        <li>Estate valuations</li>
+                        <li>Insurance valuations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property24 CTA -->
+    <section id="property24" class="property24-cta">
+        <div class="container">
+            <h2>Browse Our Property Listings</h2>
+            <p>View our complete portfolio of available properties on Property24</p>
+            <a href="https://www.property24.co.za/" target="_blank" class="property24-btn">
+                View Properties on Property24 →
+            </a>
+            <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
+                Find your perfect home or investment property from our curated selection
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Reid Realty?</h2>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">⚖️</div>
+                    <h4>Legal Expertise</h4>
+                    <p>Backed by Reid Attorneys' extensive legal experience for seamless transactions</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">🎯</div>
+                    <h4>Local Knowledge</h4>
+                    <p>Deep understanding of the Cape Town property market and regulations</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">💎</div>
+                    <h4>End-to-End Service</h4>
+                    <p>From property search to final registration, we handle everything</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-icon">🤝</div>
+                    <h4>Trusted Relationships</h4>
+                    <p>Building long-term partnerships with clients for over a decade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Attorneys CTA -->
+    <section class="realty-cta">
+        <div class="container">
+            <h2>Need Legal Services?</h2>
+            <p>Visit Reid Attorneys for comprehensive legal support</p>
+            <a href="index.html" class="btn btn-light">Visit Reid Attorneys →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Reid Realty</h3>
+                    <p>Professional property services backed by legal expertise</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Upper Wynberg, Cape Town<br>South Africa</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Residential Sales</li>
+                        <li>Commercial Property</li>
+                        <li>Property Management</li>
+                        <li>Conveyancing</li>
+                        <li>Investment Consulting</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Reid Realty. Part of Reid Attorneys Incorporated.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
